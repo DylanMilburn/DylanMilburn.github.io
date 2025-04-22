@@ -23,18 +23,44 @@
       backdrop-filter: brightness(0.6);
     }
 
-    a {
-      text-decoration: none;
-      color: #ffffff;
-      font-weight: bold;
-      background-color: rgba(255, 255, 255, 0.1);
-      padding: 8px 14px;
-      border-radius: 6px;
-      transition: background 0.3s;
+    .back-button {
+      position: fixed;
+      top: 30px;
+      left: 30px;
+      z-index: 1000;
     }
 
-    a:hover {
+    .back-button a {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      width: 45px;
+      white-space: nowrap;
+      padding: 10px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      transition: width 0.4s ease, background 0.3s ease;
+      color: #ffffff;
+      font-weight: bold;
+    }
+
+    .back-button a i {
+      font-size: 1.2rem;
+      margin-right: 10px;
+    }
+
+    .back-button a span {
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .back-button a:hover {
+      width: 160px;
       background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .back-button a:hover span {
+      opacity: 1;
     }
 
     h1 {
@@ -45,6 +71,7 @@
     }
 
     .section {
+      margin-top: 100px;
       margin-bottom: 50px;
       background: rgba(0, 0, 0, 0.5);
       padding: 30px;
@@ -101,7 +128,13 @@
   </style>
 </head>
 <body>
-  <a href="about.html"><i class="fa-solid fa-arrow-left"></i> Back to About</a>
+  <div class="back-button">
+    <a href="about.html">
+      <i class="fa-solid fa-arrow-left"></i>
+      <span>Back to About</span>
+    </a>
+  </div>
+
   <h1><i class="fa-solid fa-id-card icon"></i> My Background</h1>
 
   <div class="section">

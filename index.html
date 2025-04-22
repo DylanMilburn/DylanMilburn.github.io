@@ -7,158 +7,66 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-      overflow-x: hidden;
-    }
-    .sidebar {
-      position: fixed;
-      left: -180px;
-      top: 0;
+    body, html {
       height: 100%;
-      width: 180px;
-      background-color: #e0e0e0;
-      padding-top: 60px;
-      transition: left 0.3s;
-      z-index: 1000;
+      font-family: 'Open Sans', sans-serif;
     }
-    .sidebar:hover {
-      left: 0;
-    }
-    .sidebar a {
-      display: block;
-      color: #333;
-      padding: 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .sidebar a:hover {
-      background-color: #00bfff;
-      color: #fff;
-    }
-    .main-content {
-      margin-left: 50px;
-      padding: 40px 20px;
-    }
-    section {
-      margin-bottom: 80px;
-    }
-    .intro {
+    .hero {
+      background-image: url('https://via.placeholder.com/1600x900');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
       text-align: center;
+      color: white;
+      position: relative;
     }
-    .intro img {
-      border-radius: 50%;
-      width: 180px;
-      height: 180px;
-      object-fit: cover;
-      margin-bottom: 20px;
-      border: 4px solid #00bfff;
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 0;
     }
-    h1, h2, h3 {
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 {
+      font-size: 4rem;
       font-family: 'Montserrat', sans-serif;
-      color: #00bfff;
+      margin-bottom: 20px;
     }
-    p {
-      max-width: 700px;
-      margin: 20px auto;
-      line-height: 1.6;
-    }
-    .button-group {
-      margin-top: 20px;
-    }
-    .button-group a {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 20px;
+    .hero a {
       background-color: #00bfff;
       color: white;
-      text-decoration: none;
+      padding: 12px 30px;
       border-radius: 6px;
+      text-decoration: none;
+      font-size: 1.2rem;
       transition: background-color 0.3s;
     }
-    .button-group a:hover {
+    .hero a:hover {
       background-color: #009acd;
-    }
-    .projects-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-    .project {
-      background-color: #fff;
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    footer {
-      text-align: center;
-      padding: 30px 10px;
-      background-color: #e0e0e0;
-      color: #333;
     }
   </style>
 </head>
 <body>
-  <div class="sidebar">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </div>
-
-  <div class="main-content">
-    <section id="home" class="intro">
-      <img src="https://via.placeholder.com/180" alt="Dylan Milburn">
+  <div class="hero">
+    <div class="hero-content">
       <h1>Dylan Milburn</h1>
-      <p>Hi, I'm Dylan, an Information Services Apprentice at Durham University. I specialize in workplace technologies, with hands-on experience in Planon for facilities management and Power BI for crafting insightful data dashboards. My passion lies in using tech to drive smarter decisions across complex systems.</p>
-      <div class="button-group">
-        <a href="#about">Learn More</a>
-        <a href="#projects">View Projects</a>
-      </div>
-    </section>
-
-    <section id="about">
-      <h2>About Me</h2>
-      <p>As an IS Apprentice at Durham University, I've developed a deep understanding of data visualization and facilities systems. I work closely with stakeholders to improve operational processes and provide analytical support through tools like Power BI. With a knack for solving problems and a love for continuous learning, I strive to make tech more accessible and impactful.</p>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="projects-list">
-        <div class="project">
-          <h3>Power BI - Space Utilization Dashboard</h3>
-          <p>Designed and implemented a Power BI dashboard to visualize room utilization across campus buildings, helping improve scheduling efficiency.</p>
-        </div>
-        <div class="project">
-          <h3>Planon Workflow Automation</h3>
-          <p>Built automated maintenance request workflows using Planon, streamlining technician dispatch and reducing downtime.</p>
-        </div>
-        <div class="project">
-          <h3>Facilities KPI Tracker</h3>
-          <p>Developed a KPI dashboard in Power BI for the Facilities team to monitor service request completion rates and satisfaction metrics.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:dylan.milburn@example.com">dylan.milburn@example.com</a></p>
-      <p>LinkedIn: <a href="#">linkedin.com/in/dylanmilburn</a></p>
-    </section>
-
-    <footer>
-      <p>&copy; 2025 Dylan Milburn | Portfolio</p>
-    </footer>
+      <a href="about.html">About Me</a>
+    </div>
   </div>
 </body>
 </html>

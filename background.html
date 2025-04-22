@@ -14,66 +14,32 @@
     }
     body {
       font-family: 'Open Sans', sans-serif;
-      background: #1f1f2e;
-      color: #f4f4f4;
+      background: #141414;
+      color: #ffffff;
       padding: 40px;
     }
     a {
       text-decoration: none;
-      color: #00bcd4;
+      color: #ffffff;
       margin-bottom: 20px;
       display: inline-block;
       font-weight: bold;
     }
+    a:hover {
+      opacity: 0.8;
+    }
     h1 {
       font-family: 'Montserrat', sans-serif;
-      color: #00bcd4;
+      color: #ffffff;
       margin-bottom: 30px;
-    }
-    .section {
-      margin-bottom: 50px;
     }
     .icon {
       font-size: 2rem;
       margin-right: 10px;
-      color: #00bcd4;
-    }
-    .timeline {
-      position: relative;
-      margin: 40px 0;
-      padding-left: 40px;
-      border-left: 4px solid #00bcd4;
-    }
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: -10px;
-      top: 0;
-      width: 20px;
-      height: 20px;
-      background-color: #00bcd4;
-      border-radius: 50%;
-      box-shadow: 0 0 10px rgba(0, 188, 212, 0.7);
-    }
-    .timeline-entry {
-      position: relative;
-      margin-bottom: 40px;
-      padding-left: 20px;
-      border-left: 2px dashed #555;
-    }
-    .timeline-entry h3 {
-      margin: 0;
-      font-size: 1.4rem;
       color: #ffffff;
     }
-    .timeline-entry span {
-      font-size: 0.85rem;
-      color: #aaa;
-    }
-    .timeline-entry p {
-      margin-top: 10px;
-      line-height: 1.7;
-      color: #ddd;
+    .section {
+      margin-bottom: 50px;
     }
     .section-img {
       width: 100%;
@@ -82,10 +48,65 @@
       background-position: center;
       margin-bottom: 25px;
       border-radius: 10px;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-      border: 2px solid #00bcd4;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+      border: 2px solid #2a2a2a;
+    }
+    .timeline {
+      position: relative;
+      margin: 40px 0;
+      padding-left: 40px;
+      border-left: 3px solid #ffffff33;
+    }
+    .timeline-entry {
+      position: relative;
+      margin-bottom: 40px;
+      padding-left: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+    .timeline-entry::before {
+      content: '';
+      position: absolute;
+      left: -30px;
+      top: 5px;
+      width: 16px;
+      height: 16px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+    }
+    .timeline-entry h3 {
+      margin: 0;
+      font-size: 1.3rem;
+      color: #ffffff;
+    }
+    .timeline-entry span {
+      font-size: 0.85rem;
+      color: #bbbbbb;
+    }
+    .timeline-entry p {
+      margin-top: 10px;
+      line-height: 1.7;
+      color: #dddddd;
+      display: none;
+    }
+    .timeline-entry.active p {
+      display: block;
+    }
+    .timeline-entry:hover h3 {
+      text-decoration: underline;
     }
   </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const entries = document.querySelectorAll(".timeline-entry");
+      entries.forEach(entry => {
+        entry.addEventListener("click", () => {
+          entry.classList.toggle("active");
+        });
+      });
+    });
+  </script>
 </head>
 <body>
   <a href="about.html"><i class="fa-solid fa-arrow-left"></i> Back to About</a>
@@ -100,17 +121,17 @@
     <div class="timeline-entry">
       <h3>Early Interest in Technology</h3>
       <span>2015</span>
-      <p>Started experimenting with computers and software which sparked a passion for tech and digital tools.</p>
+      <p>Started experimenting with computers and software which sparked a passion for tech and digital tools. Tinkered with early coding tools and began building basic websites and dashboards.</p>
     </div>
     <div class="timeline-entry">
       <h3>First Internship</h3>
       <span>2019</span>
-      <p>Participated in a summer internship program focused on digital systems and data workflows.</p>
+      <p>Participated in a summer internship program focused on digital systems and data workflows. Learned real-world project management, technical collaboration, and backend operations for IT teams.</p>
     </div>
     <div class="timeline-entry">
       <h3>Joined Durham University</h3>
       <span>2023</span>
-      <p>Began apprenticeship in Information Services with hands-on work using Power BI and Planon to support operations.</p>
+      <p>Began apprenticeship in Information Services with hands-on work using Power BI and Planon. Supported digital transformation initiatives and improved how facilities data is analyzed and acted upon.</p>
     </div>
   </div>
 </body>

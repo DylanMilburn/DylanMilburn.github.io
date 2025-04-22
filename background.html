@@ -12,126 +12,134 @@
       margin: 0;
       padding: 0;
     }
+
     body {
       font-family: 'Open Sans', sans-serif;
-      background: #141414;
-      color: #ffffff;
+      color: #fff;
+      background: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
       padding: 40px;
+      backdrop-filter: brightness(0.6);
     }
+
     a {
       text-decoration: none;
       color: #ffffff;
-      margin-bottom: 20px;
-      display: inline-block;
       font-weight: bold;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: background 0.3s;
     }
+
     a:hover {
-      opacity: 0.8;
+      background-color: rgba(255, 255, 255, 0.3);
     }
+
     h1 {
       font-family: 'Montserrat', sans-serif;
-      color: #ffffff;
+      font-size: 2.5rem;
       margin-bottom: 30px;
-    }
-    .icon {
-      font-size: 2rem;
-      margin-right: 10px;
       color: #ffffff;
     }
+
     .section {
       margin-bottom: 50px;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 30px;
+      border-radius: 15px;
     }
-    .section-img {
-      width: 100%;
-      height: 260px;
-      background-size: cover;
-      background-position: center;
-      margin-bottom: 25px;
-      border-radius: 10px;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
-      border: 2px solid #2a2a2a;
-    }
+
     .timeline {
       position: relative;
-      margin: 40px 0;
-      padding-left: 40px;
-      border-left: 3px solid #ffffff33;
+      margin-top: 40px;
+      border-left: 4px solid #ffffff44;
+      padding-left: 30px;
     }
+
     .timeline-entry {
       position: relative;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
       padding-left: 20px;
-      cursor: pointer;
-      transition: all 0.3s ease-in-out;
+      transition: transform 0.3s, background 0.3s;
     }
-    .timeline-entry::before {
-      content: '';
-      position: absolute;
-      left: -30px;
-      top: 5px;
-      width: 16px;
-      height: 16px;
-      background-color: #ffffff;
-      border-radius: 50%;
-      box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+
+    .timeline-entry:hover {
+      transform: scale(1.02);
+      background-color: rgba(255, 255, 255, 0.05);
+      border-left: 2px solid #ffffff99;
+      padding-left: 30px;
+      border-radius: 8px;
     }
+
     .timeline-entry h3 {
-      margin: 0;
-      font-size: 1.3rem;
-      color: #ffffff;
+      font-size: 1.5rem;
+      margin-bottom: 5px;
     }
+
     .timeline-entry span {
-      font-size: 0.85rem;
-      color: #bbbbbb;
+      font-size: 0.9rem;
+      color: #ccc;
     }
+
     .timeline-entry p {
       margin-top: 10px;
-      line-height: 1.7;
-      color: #dddddd;
-      display: none;
+      line-height: 1.6;
+      color: #e0e0e0;
     }
-    .timeline-entry.active p {
-      display: block;
+
+    .icon {
+      margin-right: 10px;
     }
-    .timeline-entry:hover h3 {
-      text-decoration: underline;
+
+    @media (max-width: 600px) {
+      body {
+        padding: 20px;
+      }
     }
   </style>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const entries = document.querySelectorAll(".timeline-entry");
-      entries.forEach(entry => {
-        entry.addEventListener("click", () => {
-          entry.classList.toggle("active");
-        });
-      });
-    });
-  </script>
 </head>
 <body>
   <a href="about.html"><i class="fa-solid fa-arrow-left"></i> Back to About</a>
   <h1><i class="fa-solid fa-id-card icon"></i> My Background</h1>
 
   <div class="section">
-    <div class="section-img" style="background-image: url('https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?auto=format&fit=crop&w=1050&q=80');"></div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus nulla nec erat ullamcorper, nec scelerisque nulla malesuada. Integer blandit, sem et vestibulum gravida, ex velit mattis diam, in porta justo nulla ac orci.</p>
-  </div>
+    <p>
+      Welcome to my background page. This timeline outlines my personal journey, highlighting my early tech interests, education, and professional growth. 
+      From my initial curiosity to hands-on projects with Power BI and Planon, each step has been a building block in developing both technical and creative skills.
+    </p>
 
-  <div class="timeline">
-    <div class="timeline-entry">
-      <h3>Early Interest in Technology</h3>
-      <span>2015</span>
-      <p>Started experimenting with computers and software which sparked a passion for tech and digital tools. Tinkered with early coding tools and began building basic websites and dashboards.</p>
-    </div>
-    <div class="timeline-entry">
-      <h3>First Internship</h3>
-      <span>2019</span>
-      <p>Participated in a summer internship program focused on digital systems and data workflows. Learned real-world project management, technical collaboration, and backend operations for IT teams.</p>
-    </div>
-    <div class="timeline-entry">
-      <h3>Joined Durham University</h3>
-      <span>2023</span>
-      <p>Began apprenticeship in Information Services with hands-on work using Power BI and Planon. Supported digital transformation initiatives and improved how facilities data is analyzed and acted upon.</p>
+    <div class="timeline">
+      <div class="timeline-entry">
+        <h3>Curiosity Sparked by Tech</h3>
+        <span>2014 - 2016</span>
+        <p>Started experimenting with old laptops, learning how operating systems and basic coding worked. Created first small scripts and tried customizing software interfaces.</p>
+      </div>
+
+      <div class="timeline-entry">
+        <h3>Introduction to Data Tools</h3>
+        <span>2017 - 2018</span>
+        <p>Discovered Excel and Power BI, explored basic data visualizations and dashboards. Learned how data can tell compelling stories through interactive visuals.</p>
+      </div>
+
+      <div class="timeline-entry">
+        <h3>Early Projects & Freelance Work</h3>
+        <span>2019 - 2021</span>
+        <p>Worked on local projects creating dashboards for small businesses. Automated reports and helped visualize KPIs. Used Power BI and Google Sheets.</p>
+      </div>
+
+      <div class="timeline-entry">
+        <h3>Durham University Apprenticeship</h3>
+        <span>2023 - Present</span>
+        <p>Joined Durham University as an Information Services Apprentice. Focused on space and facilities data using Planon and Power BI. Created dashboards, reports, and data flows to support strategic decisions.</p>
+      </div>
+
+      <div class="timeline-entry">
+        <h3>Ongoing Learning</h3>
+        <span>Now</span>
+        <p>Actively expanding knowledge in cloud platforms, data pipelines, and UX design. Passionate about building smart, usable, and elegant digital tools.</p>
+      </div>
     </div>
   </div>
 </body>

@@ -3,93 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Dylan Milburn</title>
+  <title>Dylan Milburn | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body, html {
+      height: 100%;
       font-family: 'Open Sans', sans-serif;
-      background-color: #fafafa;
-      color: #333;
-      margin: 0;
-      padding: 0;
     }
-    header {
-      background-color: #00bfff;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 3rem;
-    }
-    .container {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    .profile-img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 20px;
-      border: 4px solid #00bfff;
-    }
-    .intro {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    .intro p {
-      max-width: 700px;
-      margin: 20px auto;
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-    .section-title {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.8rem;
-      color: #00bfff;
-      margin-top: 60px;
-      margin-bottom: 20px;
-    }
-    ul.skills {
-      list-style-type: none;
-      padding: 0;
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
       display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      position: relative;
     }
-    ul.skills li {
-      background-color: #e0f7ff;
-      padding: 10px 20px;
-      border-radius: 20px;
-      font-weight: bold;
-      color: #0077a3;
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 {
+      font-size: 4rem;
+      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 20px;
+    }
+    .hero a {
+      background: none;
+      border: 2px solid white;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+    }
+    .hero a:hover {
+      background-color: white;
+      color: #333;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>About Me</h1>
-  </header>
-  <div class="container">
-    <div class="intro">
-      <img src="https://via.placeholder.com/150" alt="Dylan Milburn" class="profile-img">
-      <p>Hi! I'm Dylan Milburn, currently an Information Services Apprentice at Durham University. I’m passionate about leveraging digital solutions to optimize environments, particularly in facilities management and data analytics. My work includes creating actionable dashboards and automating workflows using tools like Power BI and Planon.</p>
-    </div>
-
-    <div>
-      <h2 class="section-title">Skills</h2>
-      <ul class="skills">
-        <li>Power BI</li>
-        <li>Planon</li>
-        <li>Data Visualization</li>
-        <li>Workflow Automation</li>
-        <li>Problem Solving</li>
-        <li>Communication</li>
-      </ul>
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Dylan Milburn</h1>
+      <a href="about.html">About Me</a>
     </div>
   </div>
 </body>

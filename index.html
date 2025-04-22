@@ -1,68 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Dylan Milburn Portfolio</title>
+  <title>Dylan Milburn | Portfolio</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
   <style>
     body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
-    .w3-third img, .w3-col img {margin-bottom: 12px; border-radius: 8px}
-    .project-image {width: 100%; height: 200px; object-fit: cover;}
+    .project-image {width: 100%; height: 200px; object-fit: cover; border-radius: 8px;}
+    .w3-card-4 {transition: 0.3s;}
+    .w3-card-4:hover {box-shadow: 0 8px 16px rgba(0,0,0,0.3);}
   </style>
 </head>
 
 <body class="w3-light-grey">
 
-<!-- Sidebar (optional) -->
+<!-- Sidebar -->
 <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
   <button onclick="w3_close()" class="w3-bar-item w3-button w3-large">Close ×</button>
   <a href="#about" class="w3-bar-item w3-button">About</a>
   <a href="#skills" class="w3-bar-item w3-button">Skills</a>
   <a href="#projects" class="w3-bar-item w3-button">Projects</a>
+  <a href="#contact" class="w3-bar-item w3-button">Contact</a>
 </div>
-
 <div class="w3-overlay" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
 
 <!-- Main Content -->
 <div class="w3-main" style="margin-left:0">
 
-  <!-- Header / About -->
+  <!-- Header / About Section -->
   <header class="w3-container w3-center w3-padding-64" id="about">
     <h1 class="w3-xxxlarge"><b>Dylan Milburn</b></h1>
-    <p class="w3-large">IS Apprentice at Durham University</p>
-    <p class="w3-opacity">Combining facilities management expertise with data-driven insights.</p>
-    <p class="w3-padding-16 w3-margin-top">
-      I’m passionate about leveraging modern workplace tools and analytics to create smarter, more efficient environments.
-      At Durham University, I work with the Planon platform and develop insightful Power BI dashboards that help guide strategy and operations.
-    </p>
+    <p class="w3-large">IS Apprentice | Durham University</p>
+    <p class="w3-opacity">Workplace solutions | Facilities tech | Data insights</p>
+    <div class="w3-content w3-padding-32">
+      <p>I am currently undertaking an Information Services Apprenticeship at Durham University, where I focus on optimizing operations through smart workplace solutions. My role bridges technology and real-world application — ensuring that data, systems, and user experiences align for maximum efficiency. I work extensively with Planon, the enterprise asset and facility management platform, and I specialize in using Power BI to visualize key data insights.</p>
+      <p>Through hands-on projects, collaboration with operational teams, and a passion for continuous learning, I'm building a foundation for a career in tech-driven facilities management and analytics.</p>
+    </div>
   </header>
 
   <!-- Skills Section -->
   <div class="w3-container w3-padding-64" id="skills">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Skills & Tools</h3>
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Core Skills</h3>
     <ul class="w3-ul">
-      <li><strong>Planon:</strong> Workplace and facility management – asset tracking, service requests, maintenance workflows.</li>
-      <li><strong>Power BI:</strong> Dashboard creation, data modeling, DAX queries, integrating multiple data sources.</li>
-      <li><strong>Problem Solving:</strong> Analytical approach to improving systems and workflows.</li>
-      <li><strong>Communication:</strong> Clear documentation, stakeholder reporting, and end-user support.</li>
+      <li><strong>Planon:</strong> Space management, asset tracking, helpdesk request automation, integration with sensors and IoT devices.</li>
+      <li><strong>Power BI:</strong> Data modeling, interactive dashboards, advanced DAX, cross-system data mashups, user-oriented analytics delivery.</li>
+      <li><strong>Process Improvement:</strong> Identifying inefficiencies in workflows, proposing digital solutions, and implementing measurable enhancements.</li>
+      <li><strong>Technical Communication:</strong> Writing documentation, supporting end users, and translating business needs into actionable specs.</li>
     </ul>
   </div>
 
   <!-- Projects Section -->
   <div class="w3-container w3-padding-64" id="projects">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Projects</h3>
-
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Highlighted Projects</h3>
     <div class="w3-row-padding">
 
       <!-- Project 1 -->
       <div class="w3-third w3-margin-bottom">
         <div class="w3-card-4">
-          <img src="https://via.placeholder.com/400x200?text=Dashboard+Preview" alt="Dashboard" class="project-image">
+          <img src="https://via.placeholder.com/400x200?text=Space+Dashboard" class="project-image" alt="Space Utilization Dashboard">
           <div class="w3-container">
-            <h4>Space Utilization Dashboard</h4>
-            <p>Power BI dashboard showing real-time space usage across campus, pulling data from Planon to identify underused areas and suggest improvements.</p>
+            <h4>Space Utilization Insights</h4>
+            <p>Analyzed occupancy rates across campus buildings using Planon data, highlighting underutilized areas. Delivered a dashboard to Facilities Team showing trends by time/day/building, reducing overhead and enabling realignment of space allocations.</p>
           </div>
         </div>
       </div>
@@ -70,10 +70,10 @@
       <!-- Project 2 -->
       <div class="w3-third w3-margin-bottom">
         <div class="w3-card-4">
-          <img src="https://via.placeholder.com/400x200?text=Helpdesk+Reporting" alt="Helpdesk Reporting" class="project-image">
+          <img src="https://via.placeholder.com/400x200?text=Helpdesk+Tickets" class="project-image" alt="Helpdesk Reporting">
           <div class="w3-container">
-            <h4>Helpdesk Analysis Tool</h4>
-            <p>Created a report suite in Power BI for tracking helpdesk ticket resolution times and identifying bottlenecks in the maintenance request system.</p>
+            <h4>Helpdesk Performance Analytics</h4>
+            <p>Built a reporting suite to track helpdesk requests, resolution time, and engineer performance. Empowered the maintenance team with visibility into delays and allowed for SLA monitoring and improved user response time.</p>
           </div>
         </div>
       </div>
@@ -81,10 +81,10 @@
       <!-- Project 3 -->
       <div class="w3-third w3-margin-bottom">
         <div class="w3-card-4">
-          <img src="https://via.placeholder.com/400x200?text=Energy+Monitoring" alt="Energy Dashboard" class="project-image">
+          <img src="https://via.placeholder.com/400x200?text=Energy+Efficiency" class="project-image" alt="Energy Dashboard">
           <div class="w3-container">
-            <h4>Energy Efficiency Insights</h4>
-            <p>Developed visual dashboards showing energy usage across buildings, helping teams prioritize sustainability upgrades.</p>
+            <h4>Energy Efficiency Monitoring</h4>
+            <p>Developed a dashboard merging utility consumption data with weather trends and occupancy levels. Highlighted high-consumption buildings and supported the sustainability initiative by helping to shape energy-saving policies.</p>
           </div>
         </div>
       </div>
@@ -92,38 +92,25 @@
     </div>
   </div>
 
-  <!-- Popular Tags -->
-  <div class="w3-row-padding w3-padding-32">
-    <div class="w3-third">
-      <h3>Popular Tags</h3>
-      <p>
-        <span class="w3-tag w3-black w3-margin-bottom">Facilities</span>
-        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Data</span>
-        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Power BI</span>
-        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Planon</span>
-        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Apprentice</span>
-        <span class="w3-tag w3-grey w3-small w3-margin-bottom">University</span>
-        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Smart Buildings</span>
-      </p>
-    </div>
+  <!-- Contact / Footer Section -->
+  <div class="w3-container w3-padding-64 w3-light-grey" id="contact">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact Me</h3>
+    <p>Want to collaborate, connect, or learn more? I'm open to networking and new opportunities in the field of workplace technology and analytics.</p>
+    <p>Email: <a href="mailto:dylan.milburn@example.com">dylan.milburn@example.com</a></p>
+    <p>LinkedIn: <a href="#">linkedin.com/in/dylanmilburn</a></p>
   </div>
 
-  <!-- Footer -->
-  <footer class="w3-container w3-padding-32 w3-light-grey w3-center">
-    <h4>Contact</h4>
-    <p>Interested in collaborating or learning more? Feel free to reach out via <a href="mailto:your.email@example.com">email</a> or connect on <a href="#">LinkedIn</a>.</p>
-    <p class="w3-small">Powered by <a href="https://www.w3schools.com/w3css/default.asp" class="w3-hover-opacity" target="_blank">W3.CSS</a></p>
+  <footer class="w3-container w3-black w3-center w3-padding-24">
+    <p>Portfolio powered by <a href="https://www.w3schools.com/w3css/" target="_blank" class="w3-hover-opacity">W3.CSS</a></p>
   </footer>
-
 </div>
 
-<!-- Sidebar Script -->
+<!-- JS Script -->
 <script>
   function w3_open() {
     document.getElementById("mySidebar").style.display = "block";
     document.getElementById("myOverlay").style.display = "block";
   }
-
   function w3_close() {
     document.getElementById("mySidebar").style.display = "none";
     document.getElementById("myOverlay").style.display = "none";

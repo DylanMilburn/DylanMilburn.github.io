@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dylan Milburn - Frontend Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -15,8 +16,7 @@
       background: #f9fafb;
       color: #111827;
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
+      overflow-x: hidden;
     }
 
     header {
@@ -26,6 +26,12 @@
       align-items: center;
       padding: 20px 80px;
       background: #f9fafb;
+      animation: slideDown 1s ease forwards;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
 
     header .logo {
@@ -65,14 +71,27 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      flex: 1;
       padding: 40px 80px;
       gap: 60px;
+      min-height: 90vh;
+      animation: fadeIn 2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .text {
       max-width: 600px;
+      animation: slideInLeft 1.5s ease forwards;
     }
+
+    @keyframes slideInLeft {
+      from { transform: translateX(-100px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+
     .text h1 {
       font-size: 48px;
       margin-bottom: 10px;
@@ -136,24 +155,34 @@
 
     .image {
       flex-shrink: 0;
-    }
-    .image img {
+      position: relative;
       width: 400px;
-      height: auto;
+      height: 500px;
       border-radius: 20px;
+      overflow: hidden;
+      animation: slideInRight 1.5s ease forwards;
+    }
+
+    @keyframes slideInRight {
+      from { transform: translateX(100px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+
+    .image img {
+      width: 100%;
+      height: 100%;
       object-fit: cover;
+      filter: brightness(1) contrast(1.05);
     }
 
     @media (max-width: 960px) {
       .main {
         flex-direction: column-reverse;
+        padding: 40px 20px;
         text-align: center;
       }
       header {
         padding: 20px 40px;
-      }
-      .main {
-        padding: 40px 20px;
       }
     }
   </style>
@@ -161,7 +190,7 @@
 <body>
 
   <header>
-    <div class="logo">Joe.</div>
+    <div class="logo">Dylan.</div>
     <nav>
       <a href="#">Home</a>
       <a href="#">About</a>
@@ -174,7 +203,7 @@
 
   <section class="main">
     <div class="text">
-      <h1>Hi, I'm <span>Joe Greyson</span></h1>
+      <h1>Hi, I'm <span>Dylan Milburn</span></h1>
       <h2>Frontend Developer</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore et officia suscipit ut assumenda libero tenetur expedita eaque, quaerat quasi.</p>
 
@@ -184,9 +213,9 @@
       </div>
 
       <div class="socials">
-        <a href="#"><i>LinkedIn</i></a>
-        <a href="#"><i>Twitter</i></a>
-        <a href="#"><i>Facebook</i></a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Twitter</a>
+        <a href="#">Facebook</a>
       </div>
     </div>
 

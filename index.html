@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dylan - Frontend Developer</title>
+  <title>Dylan Milburn - Frontend Developer</title>
   <style>
     * {
       margin: 0;
@@ -12,178 +12,188 @@
       font-family: 'Poppins', sans-serif;
     }
     body {
-      background: #0f172a;
-      color: #fff;
+      background: #f9fafb;
+      color: #111827;
       min-height: 100vh;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      overflow-x: hidden;
-      position: relative;
+      flex-direction: column;
     }
+
+    header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 80px;
+      background: #f9fafb;
+    }
+
+    header .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #6d28d9;
+    }
+
     nav {
-      position: absolute;
-      top: 30px;
-      left: 50px;
       display: flex;
       gap: 30px;
-      animation: slideDown 1s ease forwards;
     }
     nav a {
       text-decoration: none;
-      color: #cbd5e1;
+      color: #374151;
       font-weight: 500;
-      transition: 0.3s;
-      opacity: 0;
+      transition: color 0.3s;
     }
     nav a:hover {
-      color: #38bdf8;
+      color: #6d28d9;
     }
 
-    .container {
+    .contact-btn {
+      background: #6d28d9;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .contact-btn:hover {
+      background: #7c3aed;
+    }
+
+    .main {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      max-width: 1200px;
-      width: 100%;
-      gap: 40px;
+      justify-content: center;
+      flex: 1;
+      padding: 40px 80px;
+      gap: 60px;
     }
 
-    .content {
+    .text {
       max-width: 600px;
-      animation: fadeInLeft 1.5s ease forwards;
-      opacity: 0;
     }
-    .content h1 {
+    .text h1 {
       font-size: 48px;
       margin-bottom: 10px;
     }
-    .content h2 {
+    .text h1 span {
+      color: #6d28d9;
+    }
+    .text h2 {
       font-size: 24px;
-      color: #38bdf8;
+      color: #6b7280;
       margin-bottom: 20px;
     }
-    .content p {
+    .text p {
+      color: #6b7280;
       font-size: 16px;
-      line-height: 1.5;
       margin-bottom: 30px;
-      color: #cbd5e1;
+      line-height: 1.6;
     }
     .buttons {
       display: flex;
       gap: 20px;
-      flex-wrap: wrap;
+      margin-bottom: 40px;
     }
     .buttons a {
-      text-decoration: none;
       padding: 12px 24px;
+      text-decoration: none;
       border-radius: 8px;
-      background: #38bdf8;
-      color: #0f172a;
       font-weight: bold;
       transition: 0.3s;
     }
-    .buttons a:hover {
-      background: #0ea5e9;
+    .hire-btn {
+      background: #6d28d9;
+      color: #fff;
+    }
+    .hire-btn:hover {
+      background: #7c3aed;
+    }
+    .projects-btn {
+      background: transparent;
+      border: 2px solid #6d28d9;
+      color: #6d28d9;
+    }
+    .projects-btn:hover {
+      background: #6d28d9;
+      color: #fff;
+    }
+
+    .socials {
+      display: flex;
+      gap: 15px;
+    }
+    .socials a {
+      text-decoration: none;
+      color: #6b7280;
+      font-size: 20px;
+      transition: 0.3s;
+    }
+    .socials a:hover {
+      color: #6d28d9;
     }
 
     .image {
-      position: relative;
-      animation: fadeInRight 1.5s ease forwards;
-      opacity: 0;
-      width: 400px;
-      height: 500px;
-      overflow: hidden;
+      flex-shrink: 0;
     }
     .image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: brightness(0.6) contrast(1.1);
+      width: 400px;
+      height: auto;
       border-radius: 20px;
-      mask-image: linear-gradient(to left, rgba(0,0,0,1) 60%, rgba(0,0,0,0.6) 80%, rgba(0,0,0,0) 100%);
-      -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 60%, rgba(0,0,0,0.6) 80%, rgba(0,0,0,0) 100%);
+      object-fit: cover;
     }
 
-    /* Animations */
-    @keyframes fadeInLeft {
-      0% {
-        opacity: 0;
-        transform: translateX(-50px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-    @keyframes fadeInRight {
-      0% {
-        opacity: 0;
-        transform: translateX(50px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-    @keyframes slideDown {
-      0% {
-        transform: translateY(-30px);
-        opacity: 0;
-      }
-      100% {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-
-    /* Animate each nav link separately */
-    nav a:nth-child(1) { animation: slideDown 0.6s ease forwards 0.2s; }
-    nav a:nth-child(2) { animation: slideDown 0.6s ease forwards 0.4s; }
-    nav a:nth-child(3) { animation: slideDown 0.6s ease forwards 0.6s; }
-    nav a:nth-child(4) { animation: slideDown 0.6s ease forwards 0.8s; }
-    nav a:nth-child(5) { animation: slideDown 0.6s ease forwards 1s; }
-    nav a:nth-child(6) { animation: slideDown 0.6s ease forwards 1.2s; }
-
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
+    @media (max-width: 960px) {
+      .main {
+        flex-direction: column-reverse;
         text-align: center;
       }
-      nav {
-        left: 20px;
-        gap: 20px;
+      header {
+        padding: 20px 40px;
+      }
+      .main {
+        padding: 40px 20px;
       }
     }
   </style>
 </head>
 <body>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Portfolio</a>
-    <a href="#">Education</a>
-    <a href="#">Contact</a>
-  </nav>
+  <header>
+    <div class="logo">Joe.</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Portfolio</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+    </nav>
+    <a href="#" class="contact-btn">Let's Talk</a>
+  </header>
 
-  <div class="container">
-    <div class="content">
-      <h1>Hi, I'm Dylan</h1>
+  <section class="main">
+    <div class="text">
+      <h1>Hi, I'm <span>Joe Greyson</span></h1>
       <h2>Frontend Developer</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, ea laudantium dolorem beatae vitae quae aperiam.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore et officia suscipit ut assumenda libero tenetur expedita eaque, quaerat quasi.</p>
+
       <div class="buttons">
-        <a href="#">About Me</a>
-        <a href="#">Download CV</a>
+        <a href="#" class="hire-btn">Hire Me</a>
+        <a href="#" class="projects-btn">See Projects</a>
+      </div>
+
+      <div class="socials">
+        <a href="#"><i>LinkedIn</i></a>
+        <a href="#"><i>Twitter</i></a>
+        <a href="#"><i>Facebook</i></a>
       </div>
     </div>
 
     <div class="image">
-      <img src="https://images.unsplash.com/photo-1528892952291-009c663ce843?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Blended Profile Placeholder">
+      <img src="https://images.unsplash.com/photo-1603415526960-f8fbd0bc1a17?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Profile Picture">
     </div>
-  </div>
+  </section>
 
 </body>
 </html>

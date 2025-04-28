@@ -13,8 +13,8 @@
       font-family: 'Poppins', sans-serif;
     }
     body {
-      background: #1f2937; /* Darker background color */
-      color: #f9fafb; /* Light text color */
+      background: #2d3748; /* Darker background color */
+      color: #e2e8f0; /* Light text color */
       min-height: 100vh;
       overflow-x: hidden;
     }
@@ -25,7 +25,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 20px 80px;
-      background: #1f2937; /* Matching header background */
+      background: #2d3748; /* Matching header background */
       animation: slideDown 1s ease forwards;
     }
 
@@ -37,7 +37,7 @@
     header .logo {
       font-size: 24px;
       font-weight: bold;
-      color: #6d28d9;
+      color: #63b3ed;
     }
 
     nav {
@@ -46,26 +46,22 @@
     }
     nav a {
       text-decoration: none;
-      color: #d1d5db; /* Light text color */
+      color: #a0aec0; /* Light text color */
       font-weight: 500;
       transition: color 0.3s, transform 0.3s;
     }
     nav a:hover {
-      color: #6d28d9;
+      color: #63b3ed;
       transform: scale(1.1);
-    }
-
-    .contact-btn {
-      display: none; /* Removed Let's Talk button */
     }
 
     .main {
       display: flex;
       align-items: center;
-      justify-content: center;
-      padding: 40px 80px;
+      justify-content: space-between;
+      padding: 60px 80px;
       gap: 60px;
-      min-height: 90vh;
+      min-height: calc(100vh - 80px); /* Adjusted to fill the page */
       animation: fadeIn 2s ease;
     }
 
@@ -89,15 +85,15 @@
       margin-bottom: 10px;
     }
     .text h1 span {
-      color: #6d28d9;
+      color: #63b3ed;
     }
     .text h2 {
       font-size: 24px;
-      color: #d1d5db; /* Light text color */
+      color: #a0aec0; /* Light text color */
       margin-bottom: 20px;
     }
     .text p {
-      color: #d1d5db; /* Light text color */
+      color: #a0aec0; /* Light text color */
       font-size: 16px;
       margin-bottom: 30px;
       line-height: 1.6;
@@ -115,20 +111,20 @@
       transition: 0.3s, transform 0.3s;
     }
     .about-btn {
-      background: #6d28d9;
+      background: #63b3ed;
       color: #fff;
     }
     .about-btn:hover {
-      background: #7c3aed;
+      background: #4299e1;
       transform: translateY(-5px);
     }
     .projects-btn {
       background: transparent;
-      border: 2px solid #6d28d9;
-      color: #6d28d9;
+      border: 2px solid #63b3ed;
+      color: #63b3ed;
     }
     .projects-btn:hover {
-      background: #6d28d9;
+      background: #63b3ed;
       color: #fff;
       transform: translateY(-5px);
     }
@@ -139,20 +135,20 @@
     }
     .socials a {
       text-decoration: none;
-      color: #d1d5db; /* Light text color */
+      color: #a0aec0; /* Light text color */
       font-size: 20px;
       transition: 0.3s, transform 0.3s;
     }
     .socials a:hover {
-      color: #6d28d9;
+      color: #63b3ed;
       transform: scale(1.1);
     }
 
     .image {
       flex-shrink: 0;
       position: relative;
-      width: 500px; /* Further increased width */
-      height: 600px; /* Further increased height */
+      width: 550px; /* Increased width */
+      height: 650px; /* Increased height */
       border-radius: 20px;
       overflow: hidden;
       animation: slideInRight 1.5s ease forwards;
@@ -182,7 +178,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(to bottom, rgba(31, 41, 55, 0) 0%, #1f2937 100%);
+      background: linear-gradient(to bottom, rgba(45, 55, 72, 0) 0%, #2d3748 100%);
       pointer-events: none;
     }
 

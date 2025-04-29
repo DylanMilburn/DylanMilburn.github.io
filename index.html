@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -16,6 +17,10 @@
       color: #e2e8f0; /* Light text color */
       min-height: 100vh;
       overflow-x: hidden;
+      transition: opacity 0.5s ease-in-out;
+    }
+    body.fade-out {
+      opacity: 0;
     }
 
     header {
@@ -30,7 +35,7 @@
 
     @keyframes slideDown {
       from { transform: translateY(-50px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1); }
+      to { transform: translateY(0); opacity: 1; }
     }
 
     header .logo {
@@ -92,7 +97,7 @@
 
     @keyframes slideInLeft {
       from { transform: translateX(-100px); opacity: 0; }
-      to { transform: translateX(0); opacity: 1); }
+      to { transform: translateX(0); opacity: 1; }
     }
 
     .text h1 {
@@ -176,7 +181,7 @@
 
     @keyframes slideInRight {
       from { transform: translateX(100px); opacity: 0; }
-      to { transform: translateX(0); opacity: 1); }
+      to { transform: translateX(0); opacity: 1; }
     }
 
     .image img {
@@ -214,24 +219,24 @@
   <header>
     <div class="logo">Dylan.</div>
     <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Portfolio</a>
-      <a href="#">Education</a> <!-- Changed Blog to Education -->
-      <a href="#">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="education.html">Education</a>
+      <a href="contact.html">Contact</a>
     </nav>
-    <a href="#" class="contact-btn">Download CV</a> <!-- Changed Let's Talk to Download CV -->
+    <a href="#" class="contact-btn">Download CV</a>
   </header>
 
   <section class="main">
     <div class="text">
       <h1>Hi, I'm <span>Dylan Milburn</span></h1>
-      <h2>Higher Apprentice</h2> <!-- Changed Frontend Developer to Higher Apprentice -->
+      <h2>Higher Apprentice</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore et officia suscipit ut assumenda libero tenetur expedita eaque, quaerat quasi.</p>
 
       <div class="buttons">
-        <a href="#" class="about-btn">About Me</a> <!-- Changed Hire Me to About Me -->
-        <a href="#" class="projects-btn">See Projects</a>
+        <a href="about.html" class="about-btn">About Me</a>
+        <a href="projects.html" class="projects-btn">See Projects</a>
       </div>
 
       <div class="socials">
@@ -246,10 +251,18 @@
     </div>
   </section>
 
+  <script>
+    document.querySelectorAll('nav a, .buttons a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        if (this.getAttribute('href').startsWith('#')) return;
+        e.preventDefault();
+        const target = this.getAttribute('href');
+        document.body.classList.add('fade-out');
+        setTimeout(() => {
+          window.location.href = target;
+        }, 500);
+      });
+    });
+  </script>
 </body>
 </html>
-
-     
-    
-      
-     

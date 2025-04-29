@@ -198,6 +198,25 @@
       pointer-events: none;
     }
 
+    .skills, .experience, .testimonials {
+      padding: 60px 80px;
+      background: #2d3748; /* Slightly lighter background for sections */
+      animation: fadeIn 2s ease;
+    }
+
+    .skills h2, .experience h2, .testimonials h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #63b3ed;
+    }
+
+    .skills p, .experience p, .testimonials p {
+      color: #a0aec0; /* Light text color */
+      font-size: 16px;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
     @media (max-width: 960px) {
       .main {
         flex-direction: column-reverse;
@@ -206,6 +225,9 @@
       }
       header {
         padding: 20px 40px;
+      }
+      .skills, .experience, .testimonials {
+        padding: 40px 20px;
       }
     }
   </style>
@@ -247,5 +269,11 @@
     </div>
   </section>
 
-</body>
-</html>
+  <section class="skills">
+    <h2>Skills</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+  </section>
+
+  <section class="experience">
+    <h2>Experience</h2>
+    <p>Lorem ipsum

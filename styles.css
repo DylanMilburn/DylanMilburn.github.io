@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  background: #1a202c; /* Darker background color */
+  color: #e2e8f0; /* Light text color */
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: opacity 0.5s ease-in-out;
+}
+body.fade-out {
+  opacity: 0;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centered the top menu */
+  align-items: center;
+  padding: 20px 80px;
+  background: #1a202c; /* Matching header background */
+  animation: slideDown 1s ease forwards;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #63b3ed;
+  margin-right: auto; /* Align logo to the left */
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+nav a {
+  text-decoration: none;
+  color: #a0aec0; /* Light text color */
+  font-weight: 500;
+  transition: color 0.3s, transform 0.3s;
+}
+nav a:hover {
+  color: #63b3ed;
+  transform: scale(1.1);
+}
+
+.contact-btn {
+  background: #63b3ed;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
+  margin-left: auto; /* Align button to the right */
+}
+.contact-btn:hover {
+  background: #4299e1;
+  transform: translateY(-5px);
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 80px;
+  gap: 60px;
+  min-height: calc(100vh - 80px); /* Adjusted to fill the page */
+  animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.text {
+  max-width: 600px;
+  animation: slideInLeft 1.5s ease forwards;
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.text h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+.text h1 span {
+  color: #63b3ed;
+}
+.text h2 {
+  font-size: 24px;
+  color: #cbd5e0; /* Ensured sufficient color contrast */
+  margin-bottom: 20px;
+}
+.text p {
+  color: #cbd5e0; /* Ensured sufficient color contrast */
+  font-size: 16px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+.buttons {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+.buttons a {
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s, transform 0.3s;
+}
+.about-btn {
+  background: #63b3ed;
+  color: #fff;
+}
+.about-btn:hover {
+  background: #4299e1;
+  transform: translateY(-5px);
+}
+.projects-btn {
+  background: transparent;
+  border: 2px solid #63b3ed;
+  color: #63b3ed;
+}
+.projects-btn:hover {
+  background: #63b3ed;
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+.socials {
+  display: flex;
+  gap: 15px;
+}
+.socials a {
+  text-decoration: none;
+  color: #cbd5e0; /* Ensured sufficient color contrast */
+  font-size: 20px;
+  transition: 0.3s, transform 0.3s;
+}
+.socials a:hover {
+  color: #63b3ed;
+  transform: scale(1.1);
+}
+
+.image {
+  flex-shrink: 0;
+  position: relative;
+  width: 550px; /* Increased width */
+  height: 650px; /* Increased height */
+  border-radius: 20px;
+  overflow: hidden;
+  animation: slideInRight 1.5s ease forwards;
+  transition: transform 0.3s;
+}
+
+.image:hover {
+  transform: scale(1.05);
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Changed to contain */
+  filter: brightness(1) contrast(1.05);
+}
+
+.image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(26, 32, 44, 0) 0%, #1a202c 100%);
+  pointer-events: none;
+}
+
+@media (max-width: 960px) {
+  .main {
+    flex-direction: column-reverse;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  header {
+    padding: 20px 40px;
+  }
+}
